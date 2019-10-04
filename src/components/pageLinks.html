@@ -1,0 +1,13 @@
+@@if (nextPageNumber > 0) {
+    @@include('link.html', {
+        "href": "#page-@@nextPageNumber",
+        "children": "Next page&nbsp;→",
+        "className": "floatRight"
+    })
+}
+@@if (prevPageNumber > 0) {
+    @@include('link.html', {
+        "href": "#page-@@prevPageNumber",
+        "children": "←&nbsp;Previous page"
+    })
+}

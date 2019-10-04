@@ -1,0 +1,26 @@
+{
+  "name": "css-spa",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.html",
+  "scripts": {
+    "start": "parcel index.html --open",
+    "build": "parcel build index.html timer.html",
+    "build:html": "gulp"
+  },
+  "devDependencies": {
+    "@babel/core": "7.2.0",
+    "gulp": "^4.0.2",
+    "gulp-file-include": "^2.1.0",
+    "gulp-rename": "^1.4.0",
+    "husky": "^3.0.8",
+    "parcel-bundler": "^1.6.1"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run build:html",
+      "pre-push": "npm run build:html"
+    }
+  },
+  "keywords": []
+}
