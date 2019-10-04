@@ -3,7 +3,7 @@
 ### This repository is a simple example of using css, html to develop Single Page Application for Moscow CSS Meetup(29.10.2019)
 ![Application screenshot](https://raw.githubusercontent.com/ibabkov/css_spa/master/example.gif) 
 
-[You can see an example](https://ibabkov.github.io/css_spa/)
+[You can see an example](https://ibabkov.github.io/css_spa_presentation/)
 
 ### Initialization
 
