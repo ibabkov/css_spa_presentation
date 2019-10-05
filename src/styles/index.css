@@ -5,11 +5,11 @@
   box-sizing: border-box;
   justify-content: center;
   left: 0;
+  right: 0;
   padding-bottom: 20px;
-  padding-top: 38px;
+  padding-top: 8px;
   position: absolute;
   top: 0;
-  width: 100vw;
 }
 
 /* Closed page */
@@ -50,12 +50,13 @@ html,
 body {
   margin: 0;
   padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
   font-size: 16px;
+  color: #212121;
 }
 
 .app {
   position: relative;
-  top: -38px;
   z-index: 1;
 }
 
@@ -79,15 +80,36 @@ body {
 /* Page content */
 .navigation {
   box-sizing: border-box;
-  padding-top: 20px;
   position: relative;
   z-index: 2;
 }
 
 .navigation > .link {
   padding-right: 20px;
+  padding-bottom: 10px;
+  white-space: nowrap;
+  display: inline-block;
+}
+
+.link {
+  color: #2b56a5;
+  text-decoration: none;
+}
+.link:hover {
+  color: #214079;
+}
+.link:after {
+  color: #a7a7a7;
 }
 
 .floatRight {
   float: right;
+}
+
+.logo {
+  display: inline-block;
+  width: 48px;
+  height: 48px;
+  vertical-align: bottom;
+  padding-right: 20px;
 }
