@@ -1,12 +1,12 @@
 <head>
   <nav class="navigation layoutCompose">
     <img class="logo" alt="moscow css logo" src="./src/images/logo_moscow_css.jpg" >
-    @@loop('link.html', [
-      { "href": "#page-1", "children": "Open page #1", "className": "" },
-      { "href": "#page-2", "children": "Open page #2", "className": "" },
-      { "href": "#page-3", "children": "Open page #3", "className": "" },
-      { "href": "#page-4", "children": "Open page #4", "className": "" },
-      { "href": "#page-5", "children": "Open page #5", "className": "" }
-    ])
+    @@for (var i = 1; i <= Number(slidesLength) ; i++) {
+      @@include('link.html', {
+        "href": "#slide-`+Number(i)+`",
+        "children": "Slide #`+Number(i)+`",
+        "className": ""
+      })
+    }
   </nav>
 </head>

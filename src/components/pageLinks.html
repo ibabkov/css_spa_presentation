@@ -1,14 +1,16 @@
-@@if (nextPageNumber > 0) {
-    @@include('link.html', {
-        "href": "#page-@@nextPageNumber",
-        "children": "Next page&nbsp;→",
-        "className": "floatRight"
-    })
-}
-@@if (prevPageNumber > 0) {
-    @@include('link.html', {
-        "href": "#page-@@prevPageNumber",
-        "children": "←&nbsp;Previous page",
-        "className": ""
-    })
-}
+<div class="pageLinks">
+    @@if (Number(nextPageNumber) > 0) {
+        @@include('link.html', {
+            "href": "#slide-@@nextPageNumber",
+            "children": "Next slide&nbsp;→",
+            "className": "floatRight"
+        })
+    }
+    @@if (Number(prevPageNumber) > 0) {
+        @@include('link.html', {
+            "href": "#slide-@@prevPageNumber",
+            "children": "←&nbsp;Previous slide",
+            "className": ""
+        })
+    }
+</div>

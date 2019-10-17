@@ -1,5 +1,7 @@
 /* ------------------- Page ------------------- */
 .page {
+  display: flex;
+  flex-direction: column;
   align-items: center;
   background: white;
   box-sizing: border-box;
@@ -10,6 +12,7 @@
   padding-top: 8px;
   position: absolute;
   top: 0;
+  height: 100vh;
 }
 
 /* Closed page */
@@ -24,8 +27,8 @@
 }
 
 /* Opened page */
-.page#page-1 {
-  height: auto;
+.page#slide-1 {
+  height: 100vh;
   opacity: 1;
   overflow: visible;
   visibility: visible;
@@ -33,14 +36,14 @@
 }
 
 .page:target {
-  height: auto;
+  height: 100vh;
   opacity: 1;
   overflow: visible;
   visibility: visible;
   z-index: 2;
 }
 
-.page#page-1 > *,
+.page#slide-1 > *,
 .page:target > * {
   opacity: 1;
 }
@@ -66,7 +69,7 @@ body {
   box-sizing: border-box;
   height: 100%;
   margin: 0 auto;
-  max-width: 1376px;
+  max-width: 1420px;
   min-width: 320px;
   padding: 0 20px;
   width: 100%;
@@ -74,14 +77,18 @@ body {
 
 .layout {
   background: white;
+  display: flex;
+  flex-direction: column;
   transition: opacity 500ms ease-out;
 }
 
 /* Page content */
 .navigation {
+  padding-bottom: 8px;
   box-sizing: border-box;
   position: relative;
   z-index: 2;
+  height: auto;
 }
 
 .navigation > .link {
@@ -102,8 +109,19 @@ body {
   color: #a7a7a7;
 }
 
+.pageLinks {
+  display: block;
+  height: 18px;
+}
+
 .floatRight {
   float: right;
+}
+
+.floatRight:after {
+  content: "";
+  display: table;
+  clear: both;
 }
 
 .logo {
@@ -112,4 +130,28 @@ body {
   height: 48px;
   vertical-align: bottom;
   padding-right: 20px;
+}
+
+/* ------------------- Print ------------------- */
+
+@media print { /* Стиль для печати */
+  .page {
+    height: 100vh !important;
+    opacity: 1 !important;
+    overflow: visible !important;
+    visibility: visible !important;
+    position: relative !important;
+    page-break-after: always;
+  }
+
+  .content {
+    height: 100vh !important;
+  }
+
+  .page > * {
+    opacity: 1  !important;
+  }
+  .navigation, .pageLinks {
+    display: none  !important;
+  }
 }
