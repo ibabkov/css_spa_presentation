@@ -1,5 +1,8 @@
 <div class="page" id="slide-@@pageNumber">
-    @@include('navigation.html', { "slidesLength": "@@slidesLength"})
+    @@include('navigation.html', {
+        "slidesLength": "@@slidesLength",
+        "pageNumber": "@@pageNumber"
+    })
     <div class="layout layoutCompose">
         @@include('pageLinks.html', {
             "pageNumber": "@@pageNumber",

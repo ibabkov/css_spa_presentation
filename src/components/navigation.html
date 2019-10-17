@@ -5,7 +5,7 @@
       @@include('link.html', {
         "href": "#slide-`+Number(i)+`",
         "children": "Slide #`+Number(i)+`",
-        "className": ""
+        "className": "`+(i <= Number(pageNumber) ? 'link-focused' : '')+`"
       })
     }
   </nav>

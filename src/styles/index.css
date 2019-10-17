@@ -96,6 +96,11 @@ body {
   padding-bottom: 10px;
   white-space: nowrap;
   display: inline-block;
+  color: #a7a7a7;
+}
+
+.navigation > .link-focused {
+  color: #2b56a5;
 }
 
 .link {
