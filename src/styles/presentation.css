@@ -16,6 +16,18 @@
 
 .title {
   display: block;
-  font-size: 2em;
+  font-size: 7em;
   margin: 0;
+}
+
+@media only screen and (max-width: 1123px) {
+  .title {
+    font-size: 4em;
+  }
+}
+
+@media only screen and (max-width: 720px) {
+  .title {
+    font-size: 2em;
+  }
 }
