@@ -1,0 +1,113 @@
+.presentation {
+  display: block;
+}
+
+.content {
+  display: flex;
+  height: 100%;
+  font-size: 16px;
+  color: #121212;
+}
+
+.content_title {
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 40px;
+}
+
+.content_code {
+  justify-content: center;
+  align-items: center;
+}
+
+.content_list {
+  justify-content: center;
+  align-items: center;
+  font-size: 4em;
+}
+
+.content_list .listItem {
+  padding-bottom: 12px;
+}
+
+.content_image {
+  justify-content: center;
+  align-items: center;
+  padding-top: 20px;
+  box-sizing: border-box;
+}
+
+.content_qrcode {
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  padding-top: 20px;
+  box-sizing: border-box;
+}
+
+.content_qrcode::after {
+  display: inline-block;
+  position: absolute;
+  left: 0;
+  transform: rotate(-90deg);
+  content: 'GitHub';
+  font-size: 4em;
+}
+
+.title {
+  display: block;
+  font-size: 6em;
+  margin: 0;
+  text-align: center;
+}
+
+.image {
+  height: 100%;
+  max-width: 100%;
+  object-fit: contain;
+}
+
+.code {
+  font-family: Courier, monospace;
+  background-color: #f6f8fa;
+  border-radius: 3px;
+  padding: 40px;
+  box-sizing: border-box;
+  font-size: 5em;
+  max-width: 100%;
+  max-height: 100%;
+}
+
+@media only screen and (max-width: 1123px) {
+  .title {
+    font-size: 4em;
+    white-space: pre-wrap;
+  }
+
+  .code {
+    font-size: 3em;
+    padding: 40px;
+  }
+
+  .content_qrcode::after {
+    display: none;
+  }
+
+  .content_list {
+    font-size: 2em;
+  }
+}
+
+@media only screen and (max-width: 720px) {
+  .title {
+    font-size: 2em;
+  }
+
+  .code {
+    font-size: 2em;
+  }
+
+  .content_list {
+    font-size: 1.5em;
+  }
+}

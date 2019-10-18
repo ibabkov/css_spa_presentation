@@ -1,0 +1,10 @@
+<div class="presentation">
+    @@for (var i = 1, slidesLength = 52; i <= slidesLength ; i++) {
+        @@include('presentation/page.html', {
+            "pageNumber": `+String(i)+`,
+            "nextPageNumber": `+String(i === slidesLength ? 0 : i + 1)+`,
+            "prevPageNumber": `+String(i - 1)+`,
+            "slidesLength": `+String(slidesLength)+`
+        })
+    }
+</div>

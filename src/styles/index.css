@@ -1,15 +1,18 @@
 /* ------------------- Page ------------------- */
 .page {
+  display: flex;
+  flex-direction: column;
   align-items: center;
   background: white;
   box-sizing: border-box;
   justify-content: center;
   left: 0;
+  right: 0;
   padding-bottom: 20px;
-  padding-top: 38px;
+  padding-top: 8px;
   position: absolute;
   top: 0;
-  width: 100vw;
+  height: 100vh;
 }
 
 /* Closed page */
@@ -24,8 +27,8 @@
 }
 
 /* Opened page */
-.page#page-1 {
-  height: auto;
+.page#slide-1 {
+  height: 100vh;
   opacity: 1;
   overflow: visible;
   visibility: visible;
@@ -33,14 +36,14 @@
 }
 
 .page:target {
-  height: auto;
+  height: 100vh;
   opacity: 1;
   overflow: visible;
   visibility: visible;
   z-index: 2;
 }
 
-.page#page-1 > *,
+.page#slide-1 > *,
 .page:target > * {
   opacity: 1;
 }
@@ -50,12 +53,13 @@ html,
 body {
   margin: 0;
   padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
   font-size: 16px;
+  color: #212121;
 }
 
 .app {
   position: relative;
-  top: -38px;
   z-index: 1;
 }
 
@@ -65,7 +69,7 @@ body {
   box-sizing: border-box;
   height: 100%;
   margin: 0 auto;
-  max-width: 1376px;
+  max-width: 1420px;
   min-width: 320px;
   padding: 0 20px;
   width: 100%;
@@ -73,21 +77,86 @@ body {
 
 .layout {
   background: white;
+  display: flex;
+  flex-direction: column;
   transition: opacity 500ms ease-out;
 }
 
 /* Page content */
 .navigation {
+  padding-bottom: 8px;
   box-sizing: border-box;
-  padding-top: 20px;
   position: relative;
   z-index: 2;
+  height: auto;
 }
 
 .navigation > .link {
   padding-right: 20px;
+  padding-bottom: 10px;
+  white-space: nowrap;
+  display: inline-block;
+  color: #a7a7a7;
+}
+
+.navigation > .link-focused {
+  color: #2b56a5;
+}
+
+.link {
+  color: #2b56a5;
+  text-decoration: none;
+}
+.link:hover {
+  color: #214079;
+}
+.link:after {
+  color: #a7a7a7;
+}
+
+.pageLinks {
+  display: block;
+  height: 18px;
 }
 
 .floatRight {
   float: right;
+}
+
+.floatRight:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.logo {
+  display: inline-block;
+  width: 48px;
+  height: 48px;
+  vertical-align: bottom;
+  padding-right: 20px;
+}
+
+/* ------------------- Print ------------------- */
+
+@media print { /* Стиль для печати */
+  .page {
+    height: 100vh !important;
+    opacity: 1 !important;
+    overflow: visible !important;
+    visibility: visible !important;
+    position: relative !important;
+    page-break-after: always;
+  }
+
+  .content {
+    height: 100vh !important;
+  }
+
+  .page > * {
+    opacity: 1  !important;
+  }
+  .navigation, .pageLinks {
+    display: none  !important;
+  }
 }
