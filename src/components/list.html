@@ -1,1 +1,5 @@
-<ul class="list">@@children</ul>
+<ul class="list">
+  @@for (var i = 0; i < items.length; i++) {
+    <li class="item">`+items[i]+`</li>
+  }
+</ul>

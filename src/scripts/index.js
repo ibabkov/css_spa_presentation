@@ -1,6 +1,6 @@
 (() => {
-    const NEXT = 'PageUp';
-    const PREV = 'PageDown';
+    const NEXT = 'PageDown';
+    const PREV = 'PageUp';
     const SPACE = 32;
     const LEFT = 37;
     const RIGHT = 39;
@@ -21,7 +21,7 @@
     };
     const getNextPageHash = (event) => {
       const currentHash = window.location.hash;
-      const currentPageMatched = currentHash.match(/\d/);
+      const currentPageMatched = currentHash.match(/\d+/);
       const currentPage = currentPageMatched ? Number(currentPageMatched[0]) : 1;
       const mod = getWayMod(event);
       return `slide-${currentPage + mod}`;
