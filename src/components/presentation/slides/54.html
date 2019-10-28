@@ -5,10 +5,21 @@
             "children": "Иван Бабков"
         })
         <span class="contactsText">Ведущий веб-разработчик</span>
-        <span class="contactsText">Компания: cian.ru / ЦИАН</span>
-        <span class="contactsText">Telegram: @i_babkov</span>
-        <span class="contactsText">LinkedIn: linkedin.com/in/ivan-babkov</span>
-        <span class="contactsText">E-mail: i.babkov@cian.ru</span>
-        <span class="contactsText">iv.babkov@gmail.com</span>
+        <span class="contactsText">
+            Компания: @@include('link.html', {
+        "href": "https://www.cian.ru", "children": "cian.ru","className": ""
+        }) / ЦИАН</span>
+        <span class="contactsText">Telegram: @@include('link.html', {
+        "href": "https://t.me/i_babkov", "children": "@i_babkov","className": ""
+        })</span>
+        <span class="contactsText">LinkedIn: @@include('link.html', {
+        "href": "https://linkedin.com/in/ivan-babkov", "children": "linkedin.com/in/ivan-babkov","className": ""
+        })</span>
+        <span class="contactsText">E-mail: @@include('link.html', {
+        "href": "mailto:i.babkov@cian.ru", "children": "i.babkov@cian.ru","className": ""
+        })</span>
+        <span class="contactsText">@@include('link.html', {
+        "href": "mailto:iv.babkov@gmail.com", "children": "iv.babkov@gmail.com","className": ""
+        })</span>
     </div>
 </div>
