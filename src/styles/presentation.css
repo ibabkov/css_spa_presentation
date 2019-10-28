@@ -124,8 +124,17 @@
     font-size: 2em;
   }
 
-  .contactsContent {
+  .contactsImage {
     display: none;
+  }
+
+  .contactsContent {
+    font-size: 0.75em;
+  }
+
+  .contactsContent .title {
+    text-align: left;
+    padding-bottom: 8px;
   }
 }
 

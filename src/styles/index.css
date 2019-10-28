@@ -137,6 +137,12 @@ body {
   padding-right: 20px;
 }
 
+@media only screen and (max-width: 1123px) {
+  .navigation {
+    display: none;
+  }
+}
+
 /* ------------------- Print ------------------- */
 
 @media print { /* Стиль для печати */
@@ -160,3 +166,4 @@ body {
     display: none  !important;
   }
 }
+
