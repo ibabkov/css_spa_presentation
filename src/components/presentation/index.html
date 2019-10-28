@@ -2,7 +2,7 @@
     @@for (var i = 0, slidesLength = 55; i <= slidesLength - 1 ; i++) {
         @@include('presentation/page.html', {
             "pageNumber": `+String(i)+`,
-            "nextPageNumber": `+String(i === slidesLength ? 0 : i + 1)+`,
+            "nextPageNumber": `+String(i === slidesLength ? -1 : i + 1)+`,
             "prevPageNumber": `+String(i - 1)+`,
             "slidesLength": `+String(slidesLength)+`
         })

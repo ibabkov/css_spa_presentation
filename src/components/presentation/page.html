@@ -7,7 +7,8 @@
         @@include('pageLinks.html', {
             "pageNumber": "@@pageNumber",
             "nextPageNumber": "@@nextPageNumber",
-            "prevPageNumber": "@@prevPageNumber"
+            "prevPageNumber": "@@prevPageNumber",
+            "slidesLength": "@@slidesLength"
         } )
         @@include('presentation/slides/@@pageNumber.html', {
             "children": "Slide #@@pageNumber"
