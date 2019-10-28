@@ -1,12 +1,12 @@
 <div class="pageLinks">
-    @@if (Number(nextPageNumber) > 0) {
+    @@if (Number(slidesLength) - 1 > Number(pageNumber)) {
         @@include('link.html', {
             "href": "#slide-@@nextPageNumber",
             "children": "Next slide&nbsp;→",
             "className": "floatRight"
         })
     }
-    @@if (Number(prevPageNumber) > 0) {
+    @@if (Number(prevPageNumber) >= 0) {
         @@include('link.html', {
             "href": "#slide-@@prevPageNumber",
             "children": "←&nbsp;Previous slide",
