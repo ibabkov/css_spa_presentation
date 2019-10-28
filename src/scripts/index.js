@@ -22,7 +22,7 @@
     const getNextPageHash = (event) => {
       const currentHash = window.location.hash;
       const currentPageMatched = currentHash.match(/\d+/);
-      const currentPage = currentPageMatched ? Number(currentPageMatched[0]) : 1;
+      const currentPage = currentPageMatched ? Number(currentPageMatched[0]) : 0;
       const mod = getWayMod(event);
       return `slide-${currentPage + mod}`;
     };
