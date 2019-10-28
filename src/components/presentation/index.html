@@ -1,5 +1,5 @@
 <div class="presentation">
-    @@for (var i = 1, slidesLength = 54; i <= slidesLength ; i++) {
+    @@for (var i = 0, slidesLength = 55; i <= slidesLength - 1 ; i++) {
         @@include('presentation/page.html', {
             "pageNumber": `+String(i)+`,
             "nextPageNumber": `+String(i === slidesLength ? 0 : i + 1)+`,

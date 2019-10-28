@@ -27,7 +27,7 @@
 }
 
 /* Opened page */
-.page#slide-1 {
+.page#slide-0 {
   height: 100vh;
   opacity: 1;
   overflow: visible;
@@ -43,7 +43,7 @@
   z-index: 2;
 }
 
-.page#slide-1 > *,
+.page#slide-0 > *,
 .page:target > * {
   opacity: 1;
 }
