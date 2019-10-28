@@ -1,7 +1,7 @@
 <head>
   <nav class="navigation layoutCompose">
     <img class="logo" alt="moscow css logo" src="./src/images/logo_moscow_css.jpg" >
-    @@for (var i = 1; i <= Number(slidesLength) ; i++) {
+    @@for (var i = 0; i <= Number(slidesLength) - 1 ; i++) {
       @@include('link.html', {
         "href": "#slide-`+Number(i)+`",
         "children": "Slide #`+Number(i)+`",
